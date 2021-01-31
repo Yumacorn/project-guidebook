@@ -7,7 +7,12 @@ class CharactersController < ApplicationController
     end
 
     def create
-
+        @character = @universe.characters.new(character_params)
+        if @character.save
+            render json: @character
+        else
+            render json: {error_message: "Failed to create character"}
+        end
     end
 
     def update

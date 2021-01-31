@@ -6,9 +6,7 @@ import {fetchUniverses} from './actions/fetchUniverses';
 class App extends Component {
 
   componentDidMount() {
-    // fetch('http://localhost:3000/universes/1/characters')
-    // .then(response => response.json())
-    // .then(data => console.log(data))
+    this.props.fetchUniverses({type: "FETCH_UNIVERSES", payload: {name: "Chin"}})
   }
 
   render() {

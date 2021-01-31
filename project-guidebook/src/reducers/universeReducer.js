@@ -1,4 +1,4 @@
 export default function universeReducer(state = {universes: []}, action) {
 
-    return state
+    return action.payload
 }

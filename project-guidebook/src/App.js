@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
-import ReactDom from 'react-dom'
-
 
 export default class App extends Component {
+
+  componentDidMount() {
+    fetch('http://localhost:3000/universes/1/characters')
+    .then(response => response.json())
+    .then(data => console.log(data))
+  }
 
   render() {
     return (

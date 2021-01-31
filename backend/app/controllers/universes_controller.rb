@@ -2,8 +2,9 @@ class UniversesController < ApplicationController
 
     def index
         @universes = Universe.all
-        serialized_data = UniverseSerializer.new(@universes)
-        render json: serialized_data
+        # serialized_data = UniverseSerializer.new(@universes)
+        # render json: serialized_data
+        render json: @universes
     end
 
     def create

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_01_31_164621) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "type_of"
     t.integer "universe_id", null: false
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_01_31_164621) do
 
   create_table "universes", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "type_of"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

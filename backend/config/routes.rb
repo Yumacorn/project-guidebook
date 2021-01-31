@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  
-  resources :characters
-  resources :universes
+  resources :universes do
+    resources :characters 
+  end
+
 end

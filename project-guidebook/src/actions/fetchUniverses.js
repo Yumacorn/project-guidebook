@@ -1,7 +1,12 @@
 
-export function fetchUniverses(action) {
-    // fetch('http://localhost:3000/universes/1/characters')
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-    return action
+export function fetchUniverses() {
+    return(dispatch) => {
+        fetch('http://localhost:3000/universes')
+        .then(response => response.json())
+        .then(universes => dispatch({
+            type: 'FETCH_UNIVERSES',
+            payload: universes
+        }))
+    }
+
 }

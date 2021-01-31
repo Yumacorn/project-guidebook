@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import ReactDom from 'react-dom'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import { Provider } from 'react-redux'
 
 export default class App extends Component {
 

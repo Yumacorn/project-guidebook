@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-// import {fetchUniverses} from './actions/fetchUniverses'
 import UniverseContainer from './containers/UniverseContainer'
 
 class App extends Component {

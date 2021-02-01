@@ -1,19 +1,35 @@
-// import React, {Component} from 'react'
-// import CharacterInput from '../components/CharacterInput'
-// import Characters from '../components/Characters'
+import React, {Component} from 'react'
+import CharacterInput from '../components/CharacterInput'
+import Characters from '../components/Characters'
+import {fetchCharacters} from '../actions/fetchCharacters'
+import {connect} from 'react-redux'
 
-// class CharactersContainer extends Component {
-//     render() {
+class CharactersContainer extends Component {
+    
+    componentDidMount() {
+        this.props.fetchCharacters()
+    }
+    render() {
+        debugger
+        // let x = this.props.parentProps.parentProps.history.location.pathname.split('/')[2] || ''
+        let y = this.props.parentProps.history.location.pathname.split('/')[2]
+        return (
+            
+            <div>
+                <CharacterInput />
+                <Characters characters={this.props.universe && this.props.universe.characters} universe={this.props.universe} parentProps={this.props}/>
+                <Characters characters={this.props.characters} />
+                {y}
+                hi
+            </div>
+        )
+    }
+}
 
-//         return (
-//             <div>
-//                 <CharacterInput />
+const mapStateToProps = state => {
+    return {
+        characters: state.characters,
+    }
+}
 
-//                 <Characters characters={this.props.universe && this.props.universe.characters} />
-//                 hi
-//             </div>
-//         )
-//     }
-// }
-
-// export default CharactersContainer
+export default connect(mapStateToProps, {fetchCharacters})(CharactersContainer)

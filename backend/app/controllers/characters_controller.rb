@@ -4,7 +4,7 @@ class CharactersController < ApplicationController
     def index
         @characters = @universe.characters
         # render json: @characters
-        serialized_data = CharacterSerializer.new(@characters)
+        serialized_data = CharactersSerializer.new(@characters)
         render json: serialized_data
     end
 
@@ -12,7 +12,7 @@ class CharactersController < ApplicationController
         @character = @universe.characters.new(character_params)
         if @character.save
             # render json: @character
-            serialized_data = CharacterSerializer.new(@character)
+            serialized_data = CharactersSerializer.new(@character)
             render json: serialized_data
         else
             render json: {error_message: "Failed to create character"}
@@ -23,14 +23,14 @@ class CharactersController < ApplicationController
         @character = Character.find(params[:id])
         binding.pry
         # render json: @character
-        serialized_data = CharacterSerializer.new(@character)
+        serialized_data = CharactersSerializer.new(@character)
         render json: serialized_data
     end
 
     def show
         @character = Character.find(params[:id])
         # render json: @character    
-        serialized_data = CharacterSerializer.new(@character)
+        serialized_data = CharactersSerializer.new(@character)
         render json: serialized_data    
     end
     

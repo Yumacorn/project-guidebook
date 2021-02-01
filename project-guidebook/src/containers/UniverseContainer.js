@@ -13,8 +13,8 @@ class UniverseContainer extends Component {
     render() {
         return (
             <div>
-                <Universes universes={this.props.universes} />
                 <UniverseInput />
+                <Universes universes={this.props.universes} />
             </div>
         )
     }

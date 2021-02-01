@@ -1,16 +1,17 @@
-import React from 'react'
-import { Link} from 'react-router-dom'
-// import {Route, Link} from 'react-router-dom'
+// import React from 'react'
 
-// import Character from './Character'
+// const Characters = (props) => {
 
-const Characters = (props) => {
+//         console.log(`props? THEM: ${props}`)
+//         // debugger
+//         console.log(`SHOW THEM: ${props.characters}`)
+//         return(
+//             <div>
+//                 {props.characters && props.characters.map(character =>
+//                     <li key={character.id}>{character.name} - {character.type_of} - {character.description}</li>
+//                 )}
+//             </div>
+//         )
+// }
 
-        return(
-            <div>
-                Characters
-            </div>
-        )
-}
-
-export default Characters
+// export default Characters

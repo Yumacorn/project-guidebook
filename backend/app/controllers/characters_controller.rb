@@ -3,27 +3,35 @@ class CharactersController < ApplicationController
     before_action :set_universe
     def index
         @characters = @universe.characters
-        render json: @characters
+        # render json: @characters
+        serialized_data = CharacterSerializer.new(@characters)
+        render json: serialized_data
     end
 
     def create
         @character = @universe.characters.new(character_params)
         if @character.save
-            render json: @character
+            # render json: @character
+            serialized_data = CharacterSerializer.new(@character)
+            render json: serialized_data
         else
             render json: {error_message: "Failed to create character"}
         end
     end
 
     def update
-        @universe = Universe.find(params[:id])
+        @character = Character.find(params[:id])
         binding.pry
-        render json: @universe
+        # render json: @character
+        serialized_data = CharacterSerializer.new(@character)
+        render json: serialized_data
     end
 
     def show
         @character = Character.find(params[:id])
-        render json: @character        
+        # render json: @character    
+        serialized_data = CharacterSerializer.new(@character)
+        render json: serialized_data    
     end
     
     def destroy

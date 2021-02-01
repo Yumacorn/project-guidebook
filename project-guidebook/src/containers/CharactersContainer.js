@@ -1,19 +1,19 @@
-import React, {Component} from 'react'
-import CharacterInput from '../components/CharacterInput'
-import Characters from '../components/Characters'
+// import React, {Component} from 'react'
+// import CharacterInput from '../components/CharacterInput'
+// import Characters from '../components/Characters'
 
-class CharactersContainer extends Component {
+// class CharactersContainer extends Component {
+//     render() {
 
-    render() {
-        // debugger
+//         return (
+//             <div>
+//                 <CharacterInput />
 
-        return (
-            <div>
-                <CharacterInput />
-                <Characters characters={this.props.universe && this.props.universe.characters} />
-            </div>
-        )
-    }
-}
+//                 <Characters characters={this.props.universe && this.props.universe.characters} />
+//                 hi
+//             </div>
+//         )
+//     }
+// }
 
-export default CharactersContainer
+// export default CharactersContainer

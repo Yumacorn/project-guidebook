@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
 import UniverseContainer from './containers/UniverseContainer'
 
 class App extends Component {
@@ -7,12 +6,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Welcome to GuideBook!<br/>
+        App.js: Welcome to Universe GuideBook!<br/>
         <UniverseContainer />
-        Thanks for stopping by the universe!
+        App.js: Thanks for stopping by the our guide! Come back again soon and add your own!
       </div>
     )
   }
+
 }
 
 

@@ -7,6 +7,7 @@ import CharactersContainer from '../containers/CharactersContainer'
 const Universe = (props) => {
     // debugger
     let i = props.history.location.pathname.split('/')[2]
+    i = parseInt(i) - 1
     let universe = props.universes[props.match.params.id - 1]   
     let universe2 = {}
     // }

@@ -10,7 +10,7 @@ class CharactersContainer extends Component {
         this.props.fetchCharacters()
     }
     render() {
-        debugger
+        // debugger
         // let x = this.props.parentProps.parentProps.history.location.pathname.split('/')[2] || ''
         let y = this.props.parentProps.history.location.pathname.split('/')[2]
         return (
@@ -19,8 +19,7 @@ class CharactersContainer extends Component {
                 <CharacterInput />
                 <Characters characters={this.props.universe && this.props.universe.characters} universe={this.props.universe} parentProps={this.props}/>
                 <Characters characters={this.props.characters} />
-                {y}
-                hi
+            
             </div>
         )
     }

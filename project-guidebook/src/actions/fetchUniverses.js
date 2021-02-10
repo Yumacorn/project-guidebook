@@ -5,8 +5,7 @@ export function fetchUniverses() {
         .then(response => response.json())
         .then(universes => dispatch({
             type: 'FETCH_UNIVERSES',
-            payload: universes
+            payload: universes.data
         }))
     }
-
 }

@@ -32,15 +32,8 @@ class UniverseContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-        universes: state.universes,     //array[of objects]
-        characters: state              //object[universes: array]
-        // first_uni: state.universes[0],  //0 index of the array of objects
-        // first_uni_att: state.universes[0].attributes, //attributes key of the 0 index of the array of objects
-        // first_uni_att_char: state.universes[0].attributes.characters,
-        // first_uni_att_character: state.universes[0].attributes.characters[0],
-        // first_uni_att_character_name: state.universes[0].attributes.characters[0].name
-
-
+        universes: state.universes,
+        characters: state              
     }
 }
 

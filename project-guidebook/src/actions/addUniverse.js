@@ -1,4 +1,5 @@
 export const addUniverse = (data) => {
+    debugger
     return (dispatch) => {
         fetch('http://localhost:3000/universes', {
             headers: {
@@ -9,6 +10,6 @@ export const addUniverse = (data) => {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(account => dispatch({type: 'ADD_UNIVERSE', payload: account}))      
+        .then(universe => dispatch({type: 'ADD_UNIVERSE', payload: universe.data}))      
     }
 }

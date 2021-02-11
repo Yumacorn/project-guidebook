@@ -8,8 +8,6 @@ class Characters extends Component {
         componentDidMount() {
             console.log(`Characters.js - Mounting`)
             console.log(`Characters.js: ---------`)
-            // console.log(`props? THEM: ${props}`)
-            // console.log(`SHOW THEM: ${props.characters}`)
         }
 
         render() {

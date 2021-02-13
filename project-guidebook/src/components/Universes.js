@@ -5,18 +5,21 @@ import {Link} from 'react-router-dom'
 // import Universe from './Universe'
 
 const Universes = (props) => {
+    debugger
     console.log(props.universes)
+        if (!props.universes) {
+            return (<div>Hell no</div>)
+        }
+        
         return(
             <div >
                 --Universes.js: Woww<br/>
+                
                 {props.universes.map(universe =>
-                    <li key={universe.id}>
-                        <Link to={`/universes/${universe.id}`}>{universe.attributes.name}</Link>
-                    </li> 
+                            <li key={universe.id}>
+                                <Link to={`/universes/${universe.id}`}>{universe.attributes.name}</Link>
+                            </li> 
                 )}
-                {/* {props.universes.map(universe => 
-                    <p>{universe.id} {universe.type} {universe.attributes.name}</p>
-                )} */}
                 --Universes.js: kk
             </div>
         )

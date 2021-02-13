@@ -6,18 +6,18 @@ import Character from './Character'
 
 class Characters extends Component {
         componentDidMount() {
-            console.log(`Characters.js - Mounting`)
             console.log(`Characters.js: ---------`)
         }
 
         render() {
+            // debugger
             return(
                 <div>
                     {/* {props.characters && props.characters.map(character =>
                         <li key={character.id}>{character.name} - {character.type_of} - {character.description}</li>
                     )} */}
                     --Characters.js
-                    {/* props? THEM: ${props.characters} */}
+                    {/* props? THEM: ${this.props.universe} */}
                     <Character name='Ryan' />
                     <Character name='Adela' />
                     {this.props.characters.map(character =>

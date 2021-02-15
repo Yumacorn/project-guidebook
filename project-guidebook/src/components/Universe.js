@@ -24,7 +24,7 @@ const Universe = (props) => {
             {/* <CharactersContainer props={this.props} universe={this.props.universe} /> */}
             <CharactersContainer universe={universe} />
             taken
-            <Route path='/universes/:id' render={(routerProps) => <CharactersContainer {...routerProps} universe={universe} /> } />
+            <Route path='/universes/:universeId' render={(routerProps) => <CharactersContainer {...routerProps} universe={universe} /> } />
             pos
         </div>
     )

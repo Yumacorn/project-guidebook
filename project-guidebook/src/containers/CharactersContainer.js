@@ -35,7 +35,7 @@ class CharactersContainer extends Component {
                 <Characters characters={this.props.universe && this.props.universe.characters} universe={this.props.universe} parentProps={this.props}/> */}
                 <Characters characters={this.props.characters} />    
                 <Route path='/universes/1/characters/3' render={(routerProps) => <Character {...routerProps} characters={this.props.characters} /> } />
-                    {/* <Route exact path={`${match.url}/characters/:characterId`} render={(routerProps) => <Character {...routerProps} characters={this.props.characters} /> } /> */}
+                <Route exact path={`universes/${universeId}/characters/:characterId`} render={(routerProps) => <Character {...routerProps} characters={this.props.characters} /> } />
                 {/* <Route path={`${this.props.match.url}/characters/2`} component={Characters} /> */}
 
             </div>
@@ -43,11 +43,12 @@ class CharactersContainer extends Component {
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
     // debugger
     return {
         ...state,
-        characters: state.characterReducer.characters
+        characters: state.characterReducer.characters,
+        universeId: ownProps.match.params.universeId
     }
 }
 

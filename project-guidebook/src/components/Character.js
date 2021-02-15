@@ -5,7 +5,7 @@ const Character = (props) => {
     // props.match.params.id = id of url
     return(
         <div>
-            Frozen {props.match.params.id}
+            Frozen {props.match.params.characterId}
         </div>
     )
 }

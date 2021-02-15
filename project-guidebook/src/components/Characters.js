@@ -45,6 +45,8 @@ const Characters = (props) => {
                 Learn here, value of 'props.match.path': {props.match.path} nothing showed?<br/>
 
                 prop url<br/>
+                Displaying character list<br/>
+
                 {props.characters.map(character =>
                             <li key={character.id}>
                                 {/* <Link to={`/universes/1/characters/${character.id}`}>{character.attributes.name}</Link><br/> */}

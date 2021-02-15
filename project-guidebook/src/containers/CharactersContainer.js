@@ -27,10 +27,11 @@ class CharactersContainer extends Component {
     render() {
         debugger
         // const {universeUrl} = this.props.match.url
+        // this.props.fetchCharacters()
 
         return (
             <div style={{ textAlign: 'center', fontSize: '16px' }}>
-                Hello CharactersContainer<br/><br/>
+                {/* Hello CharactersContainer<br/><br/> */}
                 <Route path={`${this.props.match.url}/characters`} render={(routerProps) => <Characters {...routerProps} currentUrl={this.props.match.url} characters={this.props.characters}/> } />
                 {/* 1st route66666<br/> */}
                 {/* <Route exact path={`${this.props.match.url}/characters/2`} component={Characters} /> */}

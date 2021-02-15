@@ -17,9 +17,7 @@ const Universe = (props) => {
     return (
         <div>
             <h3>
-                ::UNIVERSE VIEW::<br/>
-                Univers Name:{universe ? universeName : null }<br/>
-                ...a type_of: {universe ? universeTypeOf : null }<br/>
+                ::UNIVERSE VIEW:: '{universe ? universeName : null }' which is a type of '{universe ? universeTypeOf : null }'<br/>
             </h3>
             {/* <CharactersContainer props={this.props} universe={this.props.universe} /> */}
             {/* <CharactersContainer universe={universe} /> */}

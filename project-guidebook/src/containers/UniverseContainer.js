@@ -5,6 +5,8 @@ import Universes from '../components/Universes'
 import UniverseInput from '../components/UniverseInput'
 import {Route} from 'react-router-dom'
 import Universe from '../components/Universe'
+import {Link} from 'react-router-dom'
+
 // import Characters from '../components/Characters'
 
 class UniverseContainer extends Component {
@@ -24,7 +26,7 @@ class UniverseContainer extends Component {
                 <br/>
                 -Universe Container.js:<br/><br/>
                 Index of current guides by Universe<br/>
-                Missing a Universe guide? Click to add<br/>
+                Missing a Universe guide? <Link to={`/universes/new`}>Click to add</Link><br/><br/>
                 <Route exact path='/universes/new' component={UniverseInput} />
                 <Universes universes={this.props.universes}/>
                 <Route path='/universes/:id' render={(routerProps) => <Universe {...routerProps} universes={this.props.universes} /> } />

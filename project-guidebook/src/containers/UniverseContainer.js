@@ -19,11 +19,13 @@ class UniverseContainer extends Component {
 
     
     render() {
-        // debugger
         return (
             <div>
+                <br/>
                 -Universe Container.js:<br/><br/>
-                <Route path='/universes/new' component={UniverseInput} />
+                Index of current guides by Universe<br/>
+                Missing a Universe guide? Click to add<br/>
+                <Route exact path='/universes/new' component={UniverseInput} />
                 <Universes universes={this.props.universes}/>
                 <Route path='/universes/:id' render={(routerProps) => <Universe {...routerProps} universes={this.props.universes} /> } />
                 {/* <Route exact path='/universes' render={(routerProps) => <Universes {...routerProps} universes={this.props.universes} /> } /> */}
@@ -35,7 +37,6 @@ class UniverseContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    // debugger
     return {
         ...state,
         universes: state.universeReducer.universes

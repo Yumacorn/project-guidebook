@@ -41,8 +41,8 @@ const Characters = (props) => {
             <div >
                 --Characters.js: Woww<br/>
                 {/* {props.characters} */}
-                {/* Learn here, value of 'props.match.url': {props.match.url} nothing showed?<br/>
-                Learn here, value of 'props.match.path': {props.match.path} nothing showed?<br/> */}
+                Learn here, value of 'props.match.url': {props.match.url} nothing showed?<br/>
+                Learn here, value of 'props.match.path': {props.match.path} nothing showed?<br/>
 
                 prop url<br/>
                 {props.characters.map(character =>

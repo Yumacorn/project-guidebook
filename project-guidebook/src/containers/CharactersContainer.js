@@ -4,7 +4,7 @@ import {fetchCharacters} from '../actions/fetchCharacters'
 import Characters from '../components/Characters'
 // import CharacterInput from '../components/CharacterInput'
 import {Route} from 'react-router-dom'
-import Character from '../components/Character'
+// import Character from '../components/Character'
 // import {matchPath} from 'react-router'
 
 // const match = matchPath(this.props.history.location.pathname)
@@ -31,6 +31,7 @@ class CharactersContainer extends Component {
         return (
             <div style={{ textAlign: 'center', fontSize: '16px' }}>
                 Hello CharactersContainer<br/><br/>
+                <Route path={`${this.props.match.url}/characters`} render={(routerProps) => <Characters {...routerProps} currentUrl={this.props.match.url} characters={this.props.characters}/> } />
                 {/* 1st route66666<br/> */}
                 {/* <Route exact path={`${this.props.match.url}/characters/2`} component={Characters} /> */}
                 {/* 2nd routexxxxx<br/> */}

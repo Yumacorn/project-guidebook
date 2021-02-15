@@ -7,8 +7,10 @@ class App extends Component {
     return (
       <div className="App">
         App.js: Welcome to Universe GuideBook!<br/>
-        <UniverseContainer />
-        App.js: Thanks for stopping by the our guide! Come back again soon and add your own!
+        <UniverseContainer /><br/>
+        <br/>
+        React Final Portfolio project - Flatiron School Front-End Fullstack Web Dev - by Ryan Mui<br/>
+        App.js: Thanks for stopping by the our guide site! Come back again soon and add your own!
       </div>
     )
   }

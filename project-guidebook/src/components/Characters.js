@@ -31,23 +31,30 @@ import {Link} from 'react-router-dom'
 
 
 const Characters = (props) => {
-    // debugger
     console.log(props.characters)
         if (!props.characters) {
             return (<div>aww Characters Hell no</div>)
         }
-        
+        debugger
+
         return(
             <div >
                 --Characters.js: Woww<br/>
                 {/* {props.characters} */}
+                {/* Learn here, value of 'props.match.url': {props.match.url} nothing showed?<br/>
+                Learn here, value of 'props.match.path': {props.match.path} nothing showed?<br/> */}
+
+                prop url<br/>
                 {props.characters.map(character =>
                             <li key={character.id}>
-                                <Link to={`/universes/1/characters/${character.id}`}>{character.attributes.name}</Link><br/>
-                                Mark<br/>
-                                <Link to={`/universes/2/characters/${character.id}`}>{character.attributes.name}</Link><br/>
-
+                                {/* <Link to={`/universes/1/characters/${character.id}`}>{character.attributes.name}</Link><br/> */}
+                                {/* Mark<br/> */}
+                                {/* <Link to={`/universes/2/characters/${character.id}`}>{character.attributes.name}</Link><br/> */}
+                                {/* Mark 2---------<br/> */}
+                                {/* <Link to={`${props.match.path}/${character.id}`}>{character.attributes.name}</Link><br/> */}
                                 {/* <Link to={`${props.match.url}/${character.id}`}>{character.attributes.name}</Link><br/> */}
+                                <Link to={`${props.currentUrl}/characters/${character.id}`}>{character.attributes.name}</Link><br/>
+
                                 {/* <p>{`${props.match.params.characterId}/${character.id}`}</p><br/> */}
 
                             </li> 

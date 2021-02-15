@@ -36,16 +36,16 @@ class CharactersContainer extends Component {
                 {/* 2nd routexxxxx<br/> */}
                 {/* <Route path={`${this.props.match.url}/characters/2`} render={(routerProps) => <Characters {...routerProps} characters={this.props.characters} /> } /> */}
                 3rd route======<br/>
-                <Route path={`${this.props.match.url}/characters/:characterId`} render={(routerProps) => <Characters {...routerProps} characters={this.props.characters} /> } />
+                <Route path={`${this.props.match.url}/characters/:characterId`} render={(routerProps) => <Characters {...routerProps} currentUrl={this.props.match.url} characters={this.props.characters} /> } />
                 3rd route======ENDED<br/>
 
                 --=testing area=--<br/>
-                Here console log {this.props.match.url}<br/>
+                Here console log: {this.props.match.url}<br/>
                 {console.log(this.props.match.url)}
                 {/* <CharacterInput />
                 <Characters characters={this.props.universe && this.props.universe.characters} universe={this.props.universe} parentProps={this.props}/> */}
-                <Characters characters={this.props.characters} />    
-                <Route path='/universes/1/characters/3' render={(routerProps) => <Character {...routerProps} characters={this.props.characters} /> } />
+                {/* <Characters characters={this.props.characters} />     */}
+                {/* <Route path='/universes/1/characters/3' render={(routerProps) => <Character {...routerProps} characters={this.props.characters} /> } /> */}
                 {/* <Route exact path={`universes/${this.props.match.params.universeId}/characters/:characterId`} render={(routerProps) => <Character {...routerProps} characters={this.props.characters} /> } /> */}
 
             </div>

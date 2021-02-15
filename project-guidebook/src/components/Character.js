@@ -1,7 +1,14 @@
 // import React, {Component} from 'react'
 import React from 'react'
-
-const Character = (props) => <p>Frozen {props.name}.</p>
+const Character = (props) => {
+    // debugger
+    // props.match.params.id = id of url
+    return(
+        <div>
+            Frozen {props.match.params.id}
+        </div>
+    )
+}
 
 // const class Character extends Component {
 

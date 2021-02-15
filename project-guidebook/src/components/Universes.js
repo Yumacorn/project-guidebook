@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 // import Universe from './Universe'
 
 const Universes = (props) => {
-    debugger
+    // debugger
     console.log(props.universes)
         if (!props.universes) {
             return (<div>Hell no</div>)

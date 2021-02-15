@@ -1,5 +1,5 @@
 export default function characterReducer(state = {characters: []}, action) {
-    debugger
+    // debugger
     switch (action.type) {
         case 'FETCH_CHARACTERS':
             return {...state, characters: action.payload}

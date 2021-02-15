@@ -19,7 +19,7 @@ class UniverseContainer extends Component {
 
     
     render() {
-        debugger
+        // debugger
         return (
             <div>
                 -Universe Container.js:<br/><br/>
@@ -35,7 +35,7 @@ class UniverseContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    debugger
+    // debugger
     return {
         ...state,
         universes: state.universeReducer.universes

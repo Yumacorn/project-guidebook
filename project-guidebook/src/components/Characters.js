@@ -1,6 +1,7 @@
 // import React, {Component}from 'react'
 import React from 'react'
 // import Character from './Character'
+import {Link} from 'react-router-dom'
 
 // const Characters = (props) => {
         // debugger
@@ -42,8 +43,7 @@ const Characters = (props) => {
                 
                 {props.characters.map(character =>
                             <li key={character.id}>
-                                {/* <Link to={`/universes/${character.id}`}>{character.attributes.name}</Link> */}
-                                {character.attributes.name}
+                                <Link to={`/universes/1/characters/${character.id}`}>{character.attributes.name}</Link>
                             </li> 
                 )}
                 --Characters.js: kk

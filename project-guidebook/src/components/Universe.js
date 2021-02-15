@@ -22,7 +22,7 @@ const Universe = (props) => {
                 ...a type_of: {universe ? universeTypeOf : null }<br/>
             </h3>
             {/* <CharactersContainer props={this.props} universe={this.props.universe} /> */}
-            <CharactersContainer universe={universe} />
+            {/* <CharactersContainer universe={universe} /> */}
             taken
             <Route path='/universes/:universeId' render={(routerProps) => <CharactersContainer {...routerProps} universe={universe} /> } />
             pos

@@ -31,7 +31,7 @@ import {Link} from 'react-router-dom'
 
 
 const Characters = (props) => {
-    debugger
+    // debugger
     console.log(props.characters)
         if (!props.characters) {
             return (<div>aww Characters Hell no</div>)
@@ -40,10 +40,16 @@ const Characters = (props) => {
         return(
             <div >
                 --Characters.js: Woww<br/>
-                
+                {/* {props.characters} */}
                 {props.characters.map(character =>
                             <li key={character.id}>
-                                <Link to={`/universes/1/characters/${character.id}`}>{character.attributes.name}</Link>
+                                <Link to={`/universes/1/characters/${character.id}`}>{character.attributes.name}</Link><br/>
+                                Mark<br/>
+                                <Link to={`/universes/2/characters/${character.id}`}>{character.attributes.name}</Link><br/>
+
+                                {/* <Link to={`${props.match.url}/${character.id}`}>{character.attributes.name}</Link><br/> */}
+                                {/* <p>{`${props.match.params.characterId}/${character.id}`}</p><br/> */}
+
                             </li> 
                 )}
                 --Characters.js: kk

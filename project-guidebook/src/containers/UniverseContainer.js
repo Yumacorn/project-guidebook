@@ -9,7 +9,6 @@ import Universe from '../components/Universe'
 
 class UniverseContainer extends Component {
 
-
     componentDidMount() {
         console.log(`before UC fetch`)
         console.log(this.props)
@@ -39,7 +38,7 @@ const mapStateToProps = state => {
     debugger
     return {
         ...state,
-        universes: state.universeReducer.universes,
+        universes: state.universeReducer.universes
     }
 }
 

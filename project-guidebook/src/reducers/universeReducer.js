@@ -1,5 +1,5 @@
 export default function universeReducer(state = {universes: []}, action) {
-    // debugger     
+    debugger
     switch (action.type) {
         case 'FETCH_UNIVERSES':
             return {...state, universes: action.payload}

@@ -1,6 +1,6 @@
 
 export function fetchUniverses() {
-    // debugger
+    debugger
     return(dispatch) => {
         fetch('http://localhost:3000/universes')
         .then(response => response.json())

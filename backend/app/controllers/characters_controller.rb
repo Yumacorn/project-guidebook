@@ -9,6 +9,7 @@ class CharactersController < ApplicationController
     end
 
     def create
+        # binding.pry
         @character = @universe.characters.new(character_params)
         if @character.save
             # render json: @character
@@ -21,7 +22,7 @@ class CharactersController < ApplicationController
 
     def update
         @character = Character.find(params[:id])
-        binding.pry
+        # binding.pry
         # render json: @character
         serialized_data = CharactersSerializer.new(@character)
         render json: serialized_data

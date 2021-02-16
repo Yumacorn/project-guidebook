@@ -27,10 +27,10 @@ class UniverseInput extends Component {
     }
     render(){
         return(
-            <div>
-                <h2>New Universe Input:</h2>
+            <div classname="submitForm">
+                <h2 classname="submitForm">New Universe Input:</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Name:</label>
+                    <label classname="submitForm">Name:</label>
                     <input type='text' placeholder='Enter new name' value={this.state.name} name="name" onChange={this.handleChange}></input><br/>
                     <label>Type of:</label>
                     <input type='text' placeholder='Enter new type' value={this.state.type_of} name="type_of" onChange={this.handleChange}></input><br/>

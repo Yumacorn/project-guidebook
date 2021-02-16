@@ -5,7 +5,7 @@ let char = ''
 const Character = (props) => {
     char = props.characters[props.match.params.characterId-1]
 
-    debugger
+    // debugger
 
     // charId = {props.match.params.characterId}
     if (char) {
@@ -27,6 +27,7 @@ const Character = (props) => {
     return (
         <div>
             No Character Info to display.
+            Show {char} //
         </div>
     )
     

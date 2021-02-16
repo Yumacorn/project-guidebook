@@ -24,7 +24,7 @@ class UniverseContainer extends Component {
         return (
             <div>
                 <br/>
-                -Universe Container.js:<br/><br/>
+                {/* -Universe Container.js:<br/><br/> */}
                 Index of current guides by Universe<br/>
                 Missing a Universe guide? <Link to={`/universes/new`}>Click to add</Link><br/><br/>
                 <Route exact path='/universes/new' component={UniverseInput} />

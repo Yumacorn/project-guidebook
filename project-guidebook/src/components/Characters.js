@@ -13,8 +13,9 @@ const Characters = (props) => {
         return(
             <div >
                 --Characters.js: Woww<br/>
-                Learn here, value of 'props.match.url': {props.match.url} nothing showed?<br/>
-                Learn here, value of 'props.match.path': {props.match.path} nothing showed?<br/>
+                Learn more about Characters by clicking here<br/>
+                {/* , value of 'props.match.url': {props.match.url} nothing showed? */}
+                {/* Learn here, value of 'props.match.path': {props.match.path} nothing showed?<br/> */}
 
                 Displaying character list<br/>
 

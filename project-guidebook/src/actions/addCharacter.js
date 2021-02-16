@@ -1,6 +1,10 @@
+// import { bindActionCreators } from "redux"
+
 export const addCharacter = (data) => {
     return (dispatch) => {
-        fetch(`http://localhost:3000/${data.universe_id}/characters`, {
+        fetch(`http://localhost:3000/universes/${data.universe_id}/characters`, {
+            // fetch(`http://localhost:3000/universes/1/characters`, {
+
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -9,9 +13,10 @@ export const addCharacter = (data) => {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(account => 
-            // dispatch({type: 'ADD_CHARACTER', payload: character}
-            console.log('hi')
-        )      
+        .then(character => {
+            // debugger
+            dispatch({type: 'ADD_CHARACTER', payload: character.data})
+        })
+           
     }
 }

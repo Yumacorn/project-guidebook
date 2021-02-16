@@ -13,7 +13,7 @@ const Universes = (props) => {
         
         return(
             <div >
-                --Universes.js: Woww<br/>
+                {/* --Universes.js: Woww<br/> */}
                 
                 {props.universes.map(universe =>
                             <li key={universe.id}>
@@ -21,10 +21,10 @@ const Universes = (props) => {
                                     pathname: `/universes/${universe.id}/characters`,
                                     characters: 'Characters to be loaded'
                                 }}>{universe.attributes.name}</Link> */}
-                                <Link to={`/universes/${universe.id}`}>{universe.attributes.name}</Link>
+                                <Link to={`/universes/${universe.id}`} className="universeTitle">{universe.attributes.name}</Link>
                             </li> 
                 )}
-                --Universes.js: kk
+                {/* --Universes.js: kk */}
             </div>
         )
 }

@@ -26,7 +26,7 @@ class CharactersContainer extends Component {
                 <Route path={`${this.props.match.url}/characters`} render={(routerProps) => <Characters {...routerProps} currentUrl={this.props.match.url} characters={this.props.characters}/> } />
                 <Route path={`${this.props.match.url}/characters/:characterId`} render={(routerProps) => <Character {...routerProps} currentUrl={this.props.match.url} characters={this.props.characters} /> } />
                 Here console log: {this.props.match.url}<br/>
-                <CharacterInput />
+                {/* <CharacterInput /> */}
                 <Route exact path={`${this.props.match.url}/characters/new`} component={CharacterInput} />
 
                 {/* <Characters characters={this.props.universe && this.props.universe.characters} universe={this.props.universe} parentProps={this.props}/> */}

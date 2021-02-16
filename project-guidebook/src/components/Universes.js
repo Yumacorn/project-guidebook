@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 // import Universe from './Universe'
 
 const Universes = (props) => {
-    debugger
+    // debugger
     console.log(props.universes)
         if (!props.universes) {
             return (<div>Hell no</div>)
@@ -21,7 +21,7 @@ const Universes = (props) => {
                                     pathname: `/universes/${universe.id}/characters`,
                                     characters: 'Characters to be loaded'
                                 }}>{universe.attributes.name}</Link> */}
-                                <Link to={`/universes/${universe.id}/characters`}>{universe.attributes.name}</Link>
+                                <Link to={`/universes/${universe.id}`}>{universe.attributes.name}</Link>
                             </li> 
                 )}
                 --Universes.js: kk

@@ -1,6 +1,6 @@
 import React from 'react'
 // import {Redirect} from 'react-router-dom'
-import {Route} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
 import CharactersContainer from '../containers/CharactersContainer'
 
 let universeName = ''
@@ -22,6 +22,7 @@ const Universe = (props) => {
             {/* <CharactersContainer props={this.props} universe={this.props.universe} /> */}
             {/* <CharactersContainer universe={universe} /> */}
             taken
+            {/* <Link to={`${props.match.url}/characters`}>Display Characters</Link><br/> */}
             <Route path='/universes/:universeId' render={(routerProps) => <CharactersContainer {...routerProps} universe={universe} /> } />
             pos
         </div>

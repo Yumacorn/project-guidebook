@@ -14,7 +14,7 @@ const Character = (props) => {
         return(
             <div>
                 <h4>
-                ::Character Info::<br></br>
+                <div className="header">::Character Info::</div><br></br>
                 Name: {char.attributes.name}<br/>
                 Type: {char.attributes.type_of}<br/><br/>
                 IDs: Universe - {char.attributes.universe_id}, Character - {props.match.params.characterId-1}<br/>

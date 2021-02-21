@@ -8,9 +8,13 @@ import Universe from '../components/Universe'
 import {Link} from 'react-router-dom'
 
 // import Characters from '../components/Characters'
-
+// let isSorted = false
 class UniverseContainer extends Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {isSorted: false}
+    }
     componentDidMount() {
         console.log(`before UC fetch`)
         console.log(this.props)
@@ -19,6 +23,13 @@ class UniverseContainer extends Component {
         console.log(this.props)
     }
 
+    sortUniverses = (event) => {
+        event.preventDefault()
+        this.setState({
+            isSorted: !this.state.isSorted
+        })
+        console.log(this.state.isSorted)
+    }
     
     render() {
         return (
@@ -28,11 +39,16 @@ class UniverseContainer extends Component {
                 Index of current guides by Universe<br/>
                 Missing a Universe guide? <Link to={`/universes/new`}>Click to add</Link><br/><br/>
                 <Route exact path='/universes/new' component={UniverseInput} />
-                <Universes universes={this.props.universes}/>
+                <button name='sortButton' onClick={this.sortUniverses}>Sort Universe List {this.state.isSorted ? 'sorted!' : 'unsorted'} </button>
+
+                {/* {isSorted
+                ? <Universes isSorted={isSorted} universes={this.props.universes}/>
+                : <Universes isSorted={isSorted} universes={this.props.universes}/>
+                } */}
+                <Universes isSorted={this.state.isSorted} universes={this.props.universes}/>
                 <Route path='/universes/:id' render={(routerProps) => <Universe {...routerProps} universes={this.props.universes} /> } />
                 {/* <Route exact path='/universes' render={(routerProps) => <Universes {...routerProps} universes={this.props.universes} /> } /> */}
                 {/* <Characters characters={this.props.}/> */}
-                -Universe Container.js: End Universe Container
             </div>
         )
     }

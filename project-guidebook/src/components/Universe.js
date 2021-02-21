@@ -1,19 +1,29 @@
-import React from 'react'
-// import {Redirect} from 'react-router-dom'
-import {Route, Link} from 'react-router-dom'
+import React, { useEffect } from 'react'
+// import {Route, Link} from 'react-router-dom'
+import {Route} from 'react-router-dom'
+import {fetchUniverses} from '../actions/fetchUniverses'
+import {connect} from 'react-redux'
+
 import CharactersContainer from '../containers/CharactersContainer'
 
 let universeName = ''
 let universeTypeOf = ''
 
 const Universe = (props) => {
+    debugger
     let universe = props.universes[props.match.params.id - 1]   
     
     if (universe) {
         universeName = universe.attributes.name
         universeTypeOf = universe.attributes.type_of
     }
-    // debugger
+    
+    // useEffect((props)=> {
+    //     console.log('hippo')
+    //     // debugger
+    //     // props.fetchUniverses
+    // }, [props.match])
+
     return (
         <div>
             <h3>
@@ -21,12 +31,19 @@ const Universe = (props) => {
             </h3>
             {/* <CharactersContainer props={this.props} universe={this.props.universe} /> */}
             {/* <CharactersContainer universe={universe} /> */}
-            taken
             {/* <Link to={`${props.match.url}/characters`}>Display Characters</Link><br/> */}
             <Route path='/universes/:universeId' render={(routerProps) => <CharactersContainer {...routerProps} universe={universe} /> } />
-            pos
         </div>
     )
 }
 
-export default Universe
+// export default Universe
+
+const mapStateToProps = state => {
+    return {
+        ...state,
+        universes: state.universeReducer.universes
+    }
+}
+
+export default connect(mapStateToProps, {fetchUniverses})(Universe)

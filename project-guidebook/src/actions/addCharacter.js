@@ -2,9 +2,8 @@
 
 export const addCharacter = (data) => {
     return (dispatch) => {
+                    // fetch(`http://localhost:3000/universes/1/characters`, {
         fetch(`http://localhost:3000/universes/${data.universe_id}/characters`, {
-            // fetch(`http://localhost:3000/universes/1/characters`, {
-
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

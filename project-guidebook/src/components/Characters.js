@@ -13,18 +13,17 @@ const Characters = (props) => {
         return(
             <div >
                 --Characters.js: Woww<br/>
-                Learn more about Characters by clicking here<br/>
+                Learn more about Characters by clicking here<br/><br/>
                 {/* , value of 'props.match.url': {props.match.url} nothing showed? */}
                 {/* Learn here, value of 'props.match.path': {props.match.path} nothing showed?<br/> */}
 
-                Displaying character list<br/>
+                <div className="header">Our character list</div>
 
                 {props.characters.map(character =>
                             <li key={character.id}>
                                 <Link to={`${props.currentUrl}/characters/${character.id}`}>{character.attributes.name}</Link><br/>
                             </li> 
                 )}
-                --Characters.js: kk
             </div>
         )
 }

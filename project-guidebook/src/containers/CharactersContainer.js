@@ -5,7 +5,6 @@ import Characters from '../components/Characters'
 import CharacterInput from '../components/CharacterInput'
 import {Route, Link} from 'react-router-dom'
 import Character from '../components/Character'
-// import {matchPath} from 'react-router'
 
 class CharactersContainer extends Component {
 

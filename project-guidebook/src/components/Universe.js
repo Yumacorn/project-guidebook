@@ -33,6 +33,9 @@ const Universe = (props) => {
             {/* <CharactersContainer universe={universe} /> */}
             {/* <Link to={`${props.match.url}/characters`}>Display Characters</Link><br/> */}
             <Route path='/universes/:universeId' render={(routerProps) => <CharactersContainer {...routerProps} universe={universe} /> } />
+            <h3>
+                ::END UNIVERSE VIEW::
+            </h3>
         </div>
     )
 }

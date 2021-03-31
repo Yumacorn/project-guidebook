@@ -22,6 +22,7 @@ class CharactersContainer extends Component {
         return (
             <div style={{ textAlign: 'center', fontSize: '16px' }}>
                 <Link to={`${this.props.match.url}/characters`}>Display Characters</Link><br/>
+                {/* When you click link, should fire another this.props.fetchCharacters() call */}
                 <Route path={`${this.props.match.url}/characters`} render={(routerProps) => <Characters {...routerProps} currentUrl={this.props.match.url} characters={this.props.characters}/> } />
                 <Route path={`${this.props.match.url}/characters/:characterId`} render={(routerProps) => <Character {...routerProps} currentUrl={this.props.match.url} characters={this.props.characters} /> } />
                 Here console log: {this.props.match.url}<br/>
